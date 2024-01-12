@@ -12,7 +12,6 @@ import 'package:testing_pet/screens/pet_add/pet_info_screen.dart';
 import 'package:testing_pet/screens/pet_add/pet_detail_screen.dart';
 import 'package:testing_pet/screens/tabScreen/tabLogin.dart';
 
-
 Future<void> main() async {
   KakaoSdk.init(nativeAppKey: '8af072c461ea48f446fa772d0662a93e');
   var widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -20,9 +19,10 @@ Future<void> main() async {
   await initializeDateFormatting('ko-KR', null);
 
   await Supabase.initialize(
-    url: 'https://eleuprlegtcsmivkiqjw.supabase.co',
-    anonKey:
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVsZXVwcmxlZ3Rjc21pdmtpcWp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE5MTU4MzAsImV4cCI6MjAxNzQ5MTgzMH0.8sG1GbXkt-08Pj8WFTeekp7vTt8FblOPfJiy8jyPi_o',
+
+      url: 'https://fnjsdxnejydzzlievpie.supabase.co',
+      anonKey:
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZuanNkeG5lanlkenpsaWV2cGllIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDMyMTMwMjgsImV4cCI6MjAxODc4OTAyOH0.YuPhXNFkhfcLtU_NLg3gexiX9FORcQEqmy_BOGZw78Q'
   );
   runApp(
     MultiProvider(
@@ -43,8 +43,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routes: {
-      },
+      routes: {},
       home: TabLogin(),
     );
   }
